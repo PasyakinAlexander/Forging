@@ -4,6 +4,38 @@
     {
         max-width: 1024px;
     }
+
+    header .logo{
+        width: 300px;
+    }
+
+    .examplesOfOurWorks::before{
+        top: -350px;
+    }
+
+    footer .left{
+        width: 60%;
+    }
+
+    footer .right{
+        width: 40%;
+    }
+
+    footer .right .copyright{
+        width: 70%;
+    }
+
+    footer .right .policy{
+        width: 70%;
+    }
+
+    .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
+        left: 140px;
+    }
+
+    .examplesOfOurWorks .btn-next.btn-our-works-carousel{
+        right: 140px;
+    }
 }
 
 @media(max-width: 1024px)
@@ -20,6 +52,119 @@
     {
         max-width: 768px;
     }
+
+    header .phones{
+        flex-direction: row;
+
+        a{
+            margin-right: 30px;
+        }
+    }
+
+    .top-block{
+        padding-top: 150px;
+    }
+
+    .categories .category h3{
+        text-align: center;
+    }
+
+    .hits .products .product h3{
+        word-break: break-word;
+    }
+
+    .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
+        left: 100px;
+    }
+
+    .examplesOfOurWorks .btn-next.btn-our-works-carousel{
+        right: 100px;
+    }
+
+    .examplesOfOurWorks::before{
+        top: -300px;
+    }
+
+    .examplesOfOurWorks::after{
+        top: -300px;
+    }
+
+    .about-us .container{
+        flex-direction: column-reverse;
+
+        .descr{
+            width: 100%;
+        }
+
+        .img{
+            width: 100%;
+        }
+    }
+
+    .contacts{
+        padding-bottom: 50px;
+    }
+
+    .contacts .container{
+        flex-direction: column;
+    }
+
+    .contacts .contacts-block{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        h2{
+            width: 100%;
+        }
+
+        .address{
+            width: 50%;
+        }
+
+        .phones{
+            width: 50%;
+        }
+
+        .mail{
+            width: 50%;
+        }
+
+        .time{
+            width: 50%;
+        }
+    }
+
+    .contacts .map{
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+
+    footer .container{
+        flex-direction: column;
+
+        .left{
+            width: 100%;
+
+            .develop{
+                margin-top: 30px;
+            }
+        }
+
+        .right{
+            width: 100%;
+            margin-top: 30px;
+
+            .copyright{
+                width: 100%;
+            }
+
+            .policy{
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -28,6 +173,92 @@
     {
         max-width: 576px;
     }
+    
+    .btn-menu-mobile{
+        display: block;
+        z-index: 10;
+    }
+
+    header{
+        .phones{
+            flex-direction: column;
+        }
+    }
+
+    .navbar{
+        top: 0;
+        left: -300px;
+        background: #252525;
+        width: 300px;
+        padding: 20px 50px;
+        z-index: 10;
+        transition: 0.5s;
+
+
+        .container{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            flex-direction: column;
+        }
+
+        .btn-close-menu{
+            display: block;
+        }
+    }
+
+    .navbar.active{
+        left: 0;
+    }
+
+    .top-block{
+        video{
+            top: -150px;
+        }
+
+        h1{
+            font-size: 48px;
+        }
+
+        h2{
+            width: 100%;
+        }
+
+        .owl-dots{
+            margin-top: 20px;
+        }
+    }
+
+    .categories .category h3{
+        word-break: break-word;
+    }
+
+    .hits .products .product{
+        width: 45%;
+    }
+
+    .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
+        left: 70px;
+    }
+
+    .examplesOfOurWorks .btn-next.btn-our-works-carousel{
+        right: 70px;
+    }
+
+    .contacts{
+        .contacts-block{
+            .address, .phones, .mail, .time{
+                width: 100%;
+                flex-direction: row;
+
+                p, a{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 576px)
@@ -35,5 +266,106 @@
     .container
     {
         max-width: 100%;
+    }
+
+    header{
+        .container{
+            align-items: center;
+        }
+
+        .phones{
+            font-size: 14px;
+            margin-top: 20px;
+
+            a{
+                margin-right: 20px;
+            }
+        }
+
+        .social{
+            margin-top: 20px;
+        }
+
+        .working-hours{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-callback{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+    }
+
+    .top-block{
+        padding-top: 250px;
+
+        video{
+            transform: scale(5);
+        }
+    }
+
+    .categories{
+        .container{
+            flex-wrap: wrap;
+        }
+
+        .category{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    } 
+
+    .hits{
+        padding-top: 0;
+
+        .products{
+            .product{
+                width: 100%;
+            }
+        }
+    }
+
+    .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
+        left: 30px;
+        top: 60%;
+    }
+
+    .examplesOfOurWorks .btn-next.btn-our-works-carousel{
+        right: 30px;
+        top: 60%;
+    }
+
+    .examplesOfOurWorks::before{
+        top: -250px;
+    }
+
+    .about-us .img img{
+        height: auto;
+    }
+
+    .contacts{
+        .contacts-block{
+            .address, .phones, .mail, .time{
+                flex-direction: column;
+                font-size: 20px;
+            }
+        }
+    }
+
+    footer .left .menu{
+        flex-wrap: wrap;
+    }
+
+    .navbar{
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        background: #252525f5;
+    }
+
+    .navbar.active{
+        left: 0;
     }
 }

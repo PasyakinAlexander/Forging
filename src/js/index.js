@@ -4,6 +4,39 @@ function Core()
 {
     SetTabSwitcher();
     SetModal();
+    InitOwlCarousel();
+    ShowMenu();
+    CloseMenu();
+}
+
+function InitOwlCarousel()
+{
+    var main_carousel = $(".main-carousel").owlCarousel(
+        {
+            items: 1,
+            loop: true,
+            dots: true,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
+
+    var our_works_carousel = $(".our-works-carousel").owlCarousel(
+        {
+            items: 1,
+            loop: true,
+            dots: true,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
+
+    $('.btn-next.btn-our-works-carousel').click(function() {
+        our_works_carousel.trigger('next.owl.carousel');
+    });
+    $('.btn-prev.btn-our-works-carousel').click(function() {
+        our_works_carousel.trigger('prev.owl.carousel', [1000]);
+    });
 }
 
 function SetTabSwitcher()
@@ -95,4 +128,27 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function ShowMenu()
+{
+    $('.btn-menu-mobile').on('click', function(e) {
+        e.preventDefault();
+        if ($('.navbar').hasClass('active'))
+        {
+            return;
+        }
+        $('.navbar').addClass('active');
+    })
+}
+
+function CloseMenu()
+{
+    $('.btn-close-menu').on('click', function(e) {
+        e.preventDefault();
+        if ($('.navbar').hasClass('active'))
+        {
+            $('.navbar').removeClass('active');
+        }
+    })
 }

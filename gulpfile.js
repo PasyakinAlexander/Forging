@@ -9,7 +9,8 @@ let path = {
         css: `${projectFolder}/assets/css/`,
         js: `${projectFolder}/assets/js/`,
         img: `${projectFolder}/assets/images/`,
-        fonts: `${projectFolder}/assets/fonts/`
+        fonts: `${projectFolder}/assets/fonts/`,
+        media: `${projectFolder}/assets/media/`,
     },
     src: {
         html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
@@ -17,7 +18,8 @@ let path = {
         css: [`${sourceFolder}/scss/style.scss`, `${sourceFolder}/scss/bundle.scss`],
         js: [`${sourceFolder}/js/index.js`],
         img: `${sourceFolder}/images/**/*.+(png|jpg|gif|ico|svg|webp)`,
-        fonts: `${sourceFolder}/fonts/*.ttf`
+        fonts: `${sourceFolder}/fonts/*.ttf`,
+        media: `${sourceFolder}/media/**/*.+(mp4)`,
     },
     watch: {
         html: `${sourceFolder}/**/*.html`,
@@ -25,6 +27,7 @@ let path = {
         css: `${sourceFolder}/scss/**/*.scss`,
         js: `${sourceFolder}/js/**/*.js`,
         img: `${sourceFolder}/images/**/*.+(png|jpg|gif|ico|svg|webp)`,
+        media: `${sourceFolder}/media/**/*.+(mp4)`,
     },
     clean: `./${projectFolder}/`
 }
@@ -56,7 +59,7 @@ gulp.task('bundle', function() {
 });
 
 gulp.task('build', function() {
-    return gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, FONTS), FontsStyle);
+    return gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, MEDIA, FONTS), FontsStyle);
 });
 
 function FontsStyle(cb) {
@@ -120,6 +123,7 @@ function WatchFiles(params)
     gulp.watch([path.watch.css], CSS);
     gulp.watch([path.watch.js], JS);
     gulp.watch([path.watch.img], IMG);
+    gulp.watch([path.watch.media], MEDIA);
 }
 
 function Clean(params)
@@ -188,6 +192,13 @@ function IMG()
         .pipe(browsersync.stream());
 }
 
+function MEDIA()
+{
+    return src(path.src.media)
+        .pipe(dest(path.build.media))
+        .pipe(browsersync.stream());
+}
+
 function FONTS()
 {
     src(path.src.fonts)
@@ -199,13 +210,14 @@ function FONTS()
         .pipe(dest(path.build.fonts));
 }
 
-let build = gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, FONTS), FontsStyle);
+let build = gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, MEDIA, FONTS), FontsStyle);
 let watch = gulp.parallel(build, WatchFiles, BrowserSync);
 
 exports.bundleJs = BundleJS;
 exports.fontsStyle = FontsStyle;
 exports.fonts = FONTS;
 exports.images = IMG;
+exports.media = MEDIA;
 exports.js = JS;
 exports.css = CSS;
 exports.html = HTML;

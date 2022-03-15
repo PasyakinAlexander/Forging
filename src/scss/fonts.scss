@@ -1,1 +1,25 @@
-@include font("akrobat", "akrobat-regular", "400", "normal");
+@include font("OpenSans", "OpenSans-Bold", "700", "normal");
+@include font("OpenSans", "OpenSans-ExtraBold", "800", "normal");
+@include font("OpenSans", "OpenSans-BoldItalic", "700", "italic");
+@include font("OpenSans", "OpenSans-ExtraBoldItalic", "800", "italic");
+@include font("OpenSans", "OpenSans-Italic", "400", "italic");
+@include font("OpenSans", "OpenSans-LightItalic", "300", "italic");
+@include font("OpenSans", "OpenSans-Medium", "500", "normal");
+@include font("OpenSans", "OpenSans-MediumItalic", "500", "italic");
+@include font("OpenSans", "OpenSans-Regular", "400", "normal");
+@include font("OpenSans", "OpenSans-SemiBold", "600", "normal");
+@include font("OpenSans", "OpenSans-Light", "300", "normal");
+@include font("OpenSans", "OpenSans-SemiBoldItalic", "600", "italic");
+
+@include font("PlayfairDisplay", "PlayfairDisplay-Black", "900", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-Bold", "700", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-BlackItalic", "900", "italicl");
+@include font("PlayfairDisplay", "PlayfairDisplay-BoldItalic", "700", "italic");
+@include font("PlayfairDisplay", "PlayfairDisplay-ExtraBoldItalic", "800", "italic");
+@include font("PlayfairDisplay", "PlayfairDisplay-Italic", "400", "italic");
+@include font("PlayfairDisplay", "PlayfairDisplay-ExtraBold", "800", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-MediumItalic", "500", "italic");
+@include font("PlayfairDisplay", "PlayfairDisplay-Medium", "500", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-Regular", "400", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-SemiBold", "600", "normal");
+@include font("PlayfairDisplay", "PlayfairDisplay-SemiBoldItalic", "600", "italic");

@@ -156,7 +156,7 @@ header{
 
         li{
             font-size: 16px;
-            padding: 10px; 
+            padding: 10px 15px; 
             display: flex;
             align-items: center;
             transition: 0.5s;
@@ -169,6 +169,77 @@ header{
         .catalog-btn{
             background: #252525;
             cursor: pointer;
+            position: relative;
+
+            .catalog-list{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                background: #252525;
+                padding: 15px 0;
+                z-index: 1;
+                transition: 0.5s;
+                opacity: 0;
+                pointer-events: none;
+
+                a{
+                    padding: 10px 25px;
+                    color: white;
+                    transition: 0.5s;
+                }
+
+                a:hover{
+                    color: #aa3c05;
+                }
+            }
+        }
+
+        .catalog-btn:hover .catalog-list{
+            opacity: 1;
+            pointer-events: all;
+            cursor: auto;
+        }
+
+        .services-btn{
+            position: relative;
+
+            .services-list{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                background: #252525;
+                padding: 15px 0;
+                z-index: 1;
+                transition: 0.5s;
+                opacity: 0;
+                pointer-events: none;
+
+                a{
+                    padding: 10px 25px;
+                    color: white;
+                    transition: 0.5s;
+                }
+
+                a:hover{
+                    color: #aa3c05;
+                }
+            }
+        }
+
+        .services-btn:hover{
+            background: #252525;
+        }
+
+        .services-btn:hover .services-list{
+            opacity: 1;
+            pointer-events: all;
+            cursor: auto;
         }
     }
 
@@ -250,7 +321,7 @@ header{
         top: 0;
         left: 0;
         z-index: -1;
-        transform: scale(1.4);
+        transform: scale(1.45);
     }
 
     h1{
@@ -258,7 +329,7 @@ header{
         font-size: 72px;
         margin: 0;
         font-weight: 400;
-        margin-top: 50px;
+        margin-top: 65px;
     }
 
     h2{
@@ -266,7 +337,7 @@ header{
         width: 47%;
         margin: 0;
         font-weight: 400;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     .btn{
@@ -277,14 +348,18 @@ header{
         height: 40px;
     }
 
+    .owl-carousel{
+        z-index: 0;
+    }
+
     .owl-dots{
         margin-top: 40px;
 
         .owl-dot{
-            width: 10px;
-            height: 10px;
-            border: 1px solid #aa3c05;
-            margin: 5px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #aa3c05;
+            margin: 10px;
             transform: rotate(45deg);
             transition: 0.5s;
         }
@@ -326,7 +401,7 @@ header{
     }
 }
 
-.hits{
+.hits, .srvices-gates-and-fences, .barbecues{
     padding-top: 100px;
 
     .container{
@@ -342,18 +417,19 @@ header{
         margin: 0;
     }
 
-    .products{
+    .products, .services, .barbecues-list{
         margin-top: 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        .product{
+        .product, .service, .barbecue{
             display: flex;
             flex-direction: column;
             width: 30%;
             position: relative;
             margin-bottom: 30px;
+            padding: 5px 10px;
 
             img{
                 width: 100%;
@@ -366,6 +442,7 @@ header{
                 text-align: center;
                 margin: 0;
                 margin-top: 20px;
+                word-break: break-word;
             }
 
             .price{
@@ -383,6 +460,7 @@ header{
                 .old-price.active{
                     margin-right: 10px;
                     display: block;
+                    text-decoration: line-through;
                 }
 
                 .actual-price{
@@ -396,7 +474,7 @@ header{
                 padding: 5px;
                 background: #aa3c05;
                 position: absolute;
-                left: 5px;
+                left: 15px;
                 top: 25px;
                 display: none;
 
@@ -412,7 +490,7 @@ header{
         }
     }
 
-    .product:hover h3{
+    .product:hover h3, .service:hover h3, .barbecue:hover h3{
         text-decoration: underline;
     }
 
@@ -466,10 +544,10 @@ header{
             justify-content: center;
     
             .owl-dot{
-                width: 10px;
-                height: 10px;
-                border: 1px solid #aa3c05;
-                margin: 5px;
+                width: 15px;
+                height: 15px;
+                border: 2px solid #aa3c05;
+                margin: 10px;
                 transform: rotate(45deg);
                 transition: 0.5s;
             }
@@ -481,47 +559,52 @@ header{
     }
 
     .btn-our-works-carousel{
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
         transform: rotate(45deg);
-        border: 1px solid #aa3c05;
-        background: #aa3c0590;
+        border: 2px solid #aa3c05;
+        background: none;
         cursor: pointer;
         z-index: 1;
+        transition: 1s;
+    }
+
+    .btn-our-works-carousel:hover{
+        background: #aa3c0590;
     }
 
     .btn-our-works-carousel::before{
         content: '';
-        width: 10px;
-        height: 1px;
+        width: 20px;
+        height: 2px;
         background: white;
         position: absolute;
-        top: 7px;
-        right: 8px;
+        top: 8px;
+        right: 11px;
     }
 
     .btn-our-works-carousel::after{
         content: '';
-        width: 10px;
-        height: 1px;
+        width: 20px;
+        height: 2px;
         background: white;
         position: absolute;
-        bottom: 20px;
-        right: 3px;
+        bottom: 27px;
+        right: 2px;
         transform: rotate(90deg);
     }
 
     .btn-prev.btn-our-works-carousel{
         position: absolute;
         top: 50%;
-        left: 170px;
+        left: 150px;
         transform: rotate(225deg);
     }
 
     .btn-next.btn-our-works-carousel{
         position: absolute;
         top: 50%;
-        right: 170px;
+        right: 150px;
     }
 
     .btn-more-works{
@@ -530,6 +613,7 @@ header{
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
+        font-size: 16px;
     }
 }
 
@@ -612,7 +696,7 @@ header{
     }
 
     .contacts-block{
-        width: 40%;
+        width: 45%;
         padding-top: 100px;
         padding-bottom: 130px;
 
@@ -648,7 +732,7 @@ header{
 
     .map{
         position: absolute;
-        width: 60%;
+        width: 55%;
         height: 100%;
         right: 0;
     }
@@ -690,8 +774,12 @@ footer{
             font-size: 14px;
             margin: 0;
 
-            span{
+            a{
                 color: #aa3c05;
+            }
+
+            a:hover{
+                text-decoration: underline;
             }
         }
     }
@@ -715,6 +803,165 @@ footer{
             font-weight: 700;
             width: 45%;
             margin-top: 10px;
+        }
+    }
+}
+
+.internal-top-block{
+    padding-bottom: 50px;
+    padding-top: 0;
+    margin-top: 150px;
+    background-size: cover;
+    background-position: center;
+
+    .bread-crumbs{
+        margin-top: 70px;
+        font-size: 13px;
+
+        .active{
+            color:#aa3c05;
+        }
+    }
+
+    .btn{
+        margin-top: 80px;
+    }
+}
+
+.descr-about-us{
+    background: white;
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    h2{
+        margin: 0;
+        font-size: 54px;
+        font-family: PlayfairDisplay;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: center;
+    }
+
+    p{
+        margin: 0;
+        margin-top: 50px;
+        font-size: 18px;
+        text-align: center;
+        color: #252525;
+        font-weight: 500;
+    }
+}
+
+.internal-bottom-block{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: white;
+    color: black;
+
+    h2{
+        margin: 0;
+        font-size: 36px;
+        font-family: PlayfairDisplay;
+        font-weight: 400;
+    }
+
+    p{
+        margin: 0;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+
+.srvices-gates-and-fences{
+    background: white;
+    color: black;
+    padding-bottom: 60px;
+
+    .discount{
+        color: white;
+    }
+
+    .actual-price{
+        color:#aa3c05;
+    }
+
+    .btn{
+        width: 200px;
+        height: 35px;
+        font-size: 16px;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services{
+        flex-wrap: wrap;
+
+        .service{
+            img{
+                height: 300px;
+            }
+        }
+    }
+}
+
+.barbecues{
+    background: white;
+    color: black;
+    padding-bottom: 60px;
+    
+    .btn{
+        color: white;
+        width: 200px;
+        height: 35px;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .catalog{
+        display: flex;
+        margin-top: 60px;
+
+        .btn__switch__wrapper{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            background: #252525;
+            height: fit-content;
+            padding: 20px;
+
+            .btn__tab__switch{
+                background: none;
+                border: none;
+                color: white;
+                font-size: 17px;
+                padding: 15px;
+                text-align: left;
+                transition: 0.5s;
+            }
+
+            .btn__tab__switch.active{
+                color:#aa3c05;
+            }
+        }
+
+        .tab__viewer{
+            width: 75%;
+            padding-left: 20px;
+        }
+    }
+
+    .barbecues-list{
+        margin-top: 0;
+
+        .barbecue{
+            padding-top: 0;
+
+            .discount{
+                color: white;
+            }
         }
     }
 }

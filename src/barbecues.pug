@@ -1,0 +1,200 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        .btn-menu-mobile
+        include pug/header.pug
+        include pug/navbar.pug
+        
+        section.internal-top-block.top-block(style="background-image:url(assets/images/backgrounds/barbecues-background.jpg)")
+            .container 
+                .bread-crumbs 
+                    a(href="index.html") Главная 
+                    span - 
+                    a(href="") Продукция
+                    span.active - 
+                    a(href="barbecues.html").active Мангалы
+                h1 Мангалы, барбекю кованые
+                h2 Кованые изделия – тренд архитектурной, ландшафтной и интерьерной моды.
+                h2 Благородство художественных форм созданных из металла, необыкновенная практичность и долговечность  выгодно отличают кованые ворота.
+                a(href="").btn Обсудить идею 
+
+        section.barbecues
+            .container 
+                h2 Наша продукция - аксессуары для мангала
+                .catalog
+                    .btn__switch__wrapper
+                        button.btn__tab__switch(target="1") Мангалы без крышки
+                        button.btn__tab__switch(target="2") Мангалы с крышкой
+                        button.btn__tab__switch(target="3") Мангалы с печью
+                        button.btn__tab__switch(target="4").active Аксессуары для мангала
+                    .tab__viewer
+                        .tab(tab-name="1")
+                            .barbecues-list
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы без крышки
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы без крышки
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы без крышки
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                        .tab(tab-name="2")
+                            .barbecues-list
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с крышкой
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с крышкой
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с крышкой
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                        .tab(tab-name="3")
+                            .barbecues-list
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с печью
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с печью
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Мангалы с печью
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                        .tab.active(tab-name="4")
+                            .barbecues-list
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                                a(href="").barbecue
+                                    img(src="../assets/images/catalog_images/barbecues/accessories/skewers.jpg", alt="")
+                                    h3 Шампура кованые (с кованой ручкой)
+                                    .price
+                                        p.old-price.active 3 500 руб.
+                                        p.actual-price 1 250 руб.
+                                    .discount.active
+                                        p скидка -30%
+                a(href="").btn показать ещё 
+        include pug/examplesOfOurWorks.pug
+        section.internal-bottom-block 
+            .container 
+                h2 Советы по выбору мангала
+                p Одним из самых важных критериев в выборе мангала является материал, из которого он изготовлен. Для приготовления хорошего шашлыка не подойдут разборные мангалы в виде коробки, походные, из очень тонкой стали. Все дело в том, что такие мангалы плохо удерживают тепло. Дрова и древесный уголь очень быстро сгорают в нем, и приходится помахивать картонкой или другим приспособлением. А такие действия приводят к тому, что мясо стает сухим, естественно, портится наш шашлык. Мы изготавливаем мангалы только из толстой листовой  стали, различного сечения по выбору заказчика. Следующий критерий выбора – функциональность мангала. Самыми устойчивыми, несомненно, являются стационарные мангалы. Мангал должен быть достаточно глубоким - чтобы между мясом и верхним слоем углей в момент приготовления было не менее 15 см. Мангал обязательно должен иметь все необходимые элементы для бесперебойной работы - то есть колосники, трубу и поддувало. Их наличие позволит не только приготовить идеальный шашлык, но и сделает мангал своеобразным украшением участка, если вы захотите регулярно готовить мясо на своем загородном участке или на даче. И последний критерий – это внешний вид мангала. Кованые мангалы – одни из самых красивых и долговечных. 
+        include pug/contacts.pug
+        include pug/footer.pug
+
+        include pug/scripts.pug

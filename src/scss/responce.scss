@@ -30,11 +30,11 @@
     }
 
     .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
-        left: 140px;
+        left: 120px;
     }
 
     .examplesOfOurWorks .btn-next.btn-our-works-carousel{
-        right: 140px;
+        right: 120px;
     }
 }
 
@@ -43,6 +43,16 @@
     .container
     {
         max-width: 992px;
+    }
+
+    .barbecues{
+        .catalog{
+            .barbecues-list{
+                .barbecue{
+                    width: 50%;
+                }
+            }
+        }
     }
 }
 
@@ -55,18 +65,32 @@
 
     header .phones{
         flex-direction: row;
+        padding: 10px 0;
+        padding-left: 40px;
 
         a{
             margin-right: 30px;
         }
     }
 
+    header .social{
+        padding: 10px 0;
+    }
+
     .top-block{
         padding-top: 150px;
+
+        video{
+            transform: scale(2);
+        }
     }
 
     .categories .category h3{
         text-align: center;
+    }
+
+    .hits{
+        padding-top: 70px;
     }
 
     .hits .products .product h3{
@@ -74,11 +98,11 @@
     }
 
     .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
-        left: 100px;
+        left: 85px;
     }
 
     .examplesOfOurWorks .btn-next.btn-our-works-carousel{
-        right: 100px;
+        right: 85px;
     }
 
     .examplesOfOurWorks::before{
@@ -98,7 +122,12 @@
 
         .img{
             width: 100%;
+            height: auto;
         }
+    }
+
+    .about-us .descr h2{
+        margin-top: 25px;
     }
 
     .contacts{
@@ -113,6 +142,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        padding-bottom: 70px;
 
         h2{
             width: 100%;
@@ -165,6 +195,41 @@
             }
         }
     }
+
+    .srvices-gates-and-fences{
+        .services{
+            .service{
+                width: 50%;
+            }
+        }
+    }
+
+    .barbecues{
+        .catalog{
+            flex-direction: column;
+
+            .btn__switch__wrapper{
+                width: 100%;
+                flex-direction: row;
+
+                .btn__tab__switch{
+                    text-align: center;
+                }
+            }
+
+            .tab__viewer{
+                width: 100%;
+                margin-top: 20px;
+                padding-left: 0;
+            }
+
+            .barbecues-list{
+                .barbecue{
+                    width: 50%;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -187,12 +252,13 @@
 
     .navbar{
         top: 0;
-        left: -300px;
-        background: #252525;
-        width: 300px;
+        left: -50vw;
+        background: #252525ea;
+        width: 50vw;
         padding: 20px 50px;
         z-index: 10;
         transition: 0.5s;
+        height: 100vh;
 
 
         .container{
@@ -202,6 +268,21 @@
 
         ul{
             flex-direction: column;
+            align-items: center;
+
+            .catalog-btn{
+                width: fit-content;
+
+                .catalog-list{
+                    left: calc(50% - 150px);
+                    align-items: center;
+
+                    a{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
         }
 
         .btn-close-menu{
@@ -231,6 +312,11 @@
         }
     }
 
+    .internal-top-block{
+        padding-top: 0;
+        margin-top: 200px;
+    }
+
     .categories .category h3{
         word-break: break-word;
     }
@@ -240,11 +326,15 @@
     }
 
     .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
-        left: 70px;
+        left: 55px;
     }
 
     .examplesOfOurWorks .btn-next.btn-our-works-carousel{
-        right: 70px;
+        right: 55px;
+    }
+
+    .about-us .img img{
+        height: auto;
     }
 
     .contacts{
@@ -255,6 +345,27 @@
 
                 p, a{
                     margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .srvices-gates-and-fences{
+        .services{
+            .service{
+                img{
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    .barbecues{
+        .catalog{
+            .barbecues-list{
+                .barbecue{
+                    width: 100%;
+                    margin-bottom: 50px;
                 }
             }
         }
@@ -271,11 +382,13 @@
     header{
         .container{
             align-items: center;
+            justify-content: center;
         }
 
         .phones{
             font-size: 14px;
             margin-top: 20px;
+            width: 70%;
 
             a{
                 margin-right: 20px;
@@ -289,6 +402,9 @@
         .working-hours{
             margin-left: auto;
             margin-right: auto;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
         }
 
         .btn-callback{
@@ -298,12 +414,28 @@
         }
     }
 
+    .navbar{
+        ul{
+            align-items: center;
+        }
+
+    }
+
     .top-block{
         padding-top: 250px;
 
         video{
             transform: scale(5);
         }
+
+        h1{
+            font-size: 40px;
+        }
+    }
+
+    .internal-top-block{
+        padding-top: 0;
+        margin-top: 300px;
     }
 
     .categories{
@@ -325,24 +457,36 @@
                 width: 100%;
             }
         }
+
+        h2{
+            font-size: 45px;
+        }
     }
 
     .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
-        left: 30px;
-        top: 60%;
+        left: 5%;
+        top: 50%;
     }
 
     .examplesOfOurWorks .btn-next.btn-our-works-carousel{
-        right: 30px;
-        top: 60%;
+        right: 5%;
+        top: 50%;
     }
 
     .examplesOfOurWorks::before{
         top: -250px;
     }
 
+    .examplesOfOurWorks h2{
+        font-size: 45px;
+    }
+
     .about-us .img img{
         height: auto;
+    }
+
+    .about-us .descr h2{
+        font-size: 45px;
     }
 
     .contacts{
@@ -351,11 +495,20 @@
                 flex-direction: column;
                 font-size: 20px;
             }
+
+            h2{
+                font-size: 45px;
+            }
         }
     }
 
     footer .left .menu{
         flex-wrap: wrap;
+        flex-direction: column;
+
+        li{
+            margin-bottom: 10px;
+        }
     }
 
     .navbar{
@@ -367,5 +520,30 @@
 
     .navbar.active{
         left: 0;
+    }
+
+    .descr-about-us h2{
+        font-size: 40px;
+    }
+
+    .srvices-gates-and-fences{
+        .services{
+            .service{
+                width: 100%;
+                margin-bottom: 50px;
+
+                img{
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .barbecues{
+        .catalog{
+            .btn__switch__wrapper{
+                flex-direction: column;
+            }
+        }
     }
 }

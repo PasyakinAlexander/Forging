@@ -7,6 +7,12 @@ function Core()
     InitOwlCarousel();
     ShowMenu();
     CloseMenu();
+    InitLightbox();
+}
+
+function InitLightbox()
+{
+    $('.our-works-carousel .carousel-item a').simpleLightbox();
 }
 
 function InitOwlCarousel()

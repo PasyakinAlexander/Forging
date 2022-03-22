@@ -143,7 +143,7 @@ header{
 .navbar{
     position: absolute;
     width: 100%;
-    top: 160px;
+    top: 170px;
     left: 0;
     z-index: 1;
 
@@ -386,9 +386,21 @@ header{
         flex-direction: column;
         align-items: center;
         width: 30%;
+        height: 350px;
 
-        img{
+        .img-wrapper{
             width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .img{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
         }
 
         h3{
@@ -398,6 +410,10 @@ header{
             margin: 0;
             margin-top: 20px;
         }
+    }
+
+    .category:hover .img{
+        transform: scale(1.2);
     }
 }
 
@@ -430,9 +446,21 @@ header{
             position: relative;
             margin-bottom: 30px;
             padding: 5px 10px;
+            height: 400px;
 
-            img{
+            .img-wrapper{
                 width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .img{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-size: cover;
+                background-position: center;
+                transition: 0.5s;
             }
 
             h3{
@@ -474,7 +502,6 @@ header{
                 padding: 5px;
                 background: #aa3c05;
                 position: absolute;
-                left: 15px;
                 top: 25px;
                 display: none;
 
@@ -490,8 +517,8 @@ header{
         }
     }
 
-    .product:hover h3, .service:hover h3, .barbecue:hover h3{
-        text-decoration: underline;
+    .product:hover .img, .service:hover .img, .barbecue:hover .img{
+        transform: scale(1.2);
     }
 
     .btn-go-to-catalog{
@@ -818,6 +845,10 @@ footer{
         margin-top: 70px;
         font-size: 13px;
 
+        a{
+            word-break: break-word;
+        }
+
         .active{
             color:#aa3c05;
         }
@@ -850,6 +881,7 @@ footer{
         text-align: center;
         color: #252525;
         font-weight: 500;
+        padding: 0 200px;
     }
 }
 
@@ -942,6 +974,10 @@ footer{
                 transition: 0.5s;
             }
 
+            .btn__tab__switch:hover{
+                background: #1a1a1a;
+            }
+
             .btn__tab__switch.active{
                 color:#aa3c05;
             }
@@ -963,6 +999,13 @@ footer{
                 color: white;
             }
         }
+    }
+
+    .btn-more{
+        width: 75%;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
     }
 }
 

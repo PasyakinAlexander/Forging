@@ -210,7 +210,6 @@
 
             .btn__switch__wrapper{
                 width: 100%;
-                flex-direction: row;
 
                 .btn__tab__switch{
                     text-align: center;
@@ -229,6 +228,18 @@
                 }
             }
         }
+
+        .btn-more{
+            width: 100%;
+        }
+    }
+
+    .internal-top-block{
+        margin-top: 160px;
+    }
+
+    .descr-about-us p{
+        padding: 0 100px;
     }
 }
 
@@ -241,7 +252,7 @@
     
     .btn-menu-mobile{
         display: block;
-        z-index: 10;
+        z-index: 20;
     }
 
     header{
@@ -256,7 +267,7 @@
         background: #252525ea;
         width: 50vw;
         padding: 20px 50px;
-        z-index: 10;
+        z-index: 25;
         transition: 0.5s;
         height: 100vh;
 
@@ -264,22 +275,25 @@
         .container{
             margin: 0;
             padding: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         ul{
             flex-direction: column;
-            align-items: center;
 
             .catalog-btn{
                 width: fit-content;
+                background: none;
 
                 .catalog-list{
-                    left: calc(50% - 150px);
+                    left: calc(50% - 120px);
                     align-items: center;
 
                     a{
                         width: 100%;
-                        text-align: center;
                     }
                 }
             }
@@ -369,6 +383,10 @@
                 }
             }
         }
+    }
+
+    .descr-about-us p{
+        padding: 0 50px;
     }
 }
 
@@ -463,6 +481,10 @@
         }
     }
 
+    .hits h2, .srvices-gates-and-fences h2, .barbecues h2{
+        font-size: 35px;
+    }
+
     .examplesOfOurWorks .btn-prev.btn-our-works-carousel{
         left: 5%;
         top: 50%;
@@ -523,7 +545,7 @@
     }
 
     .descr-about-us h2{
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .srvices-gates-and-fences{
@@ -545,5 +567,9 @@
                 flex-direction: column;
             }
         }
+    }
+
+    .descr-about-us p{
+        padding: 0;
     }
 }
